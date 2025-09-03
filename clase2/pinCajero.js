@@ -22,12 +22,12 @@ while(numeroIntentos < 2 && pin != PIN){
 if(pin===PIN){
     let opcion = '';
     while(opcion != 'salir'){ 
-    
-     opcion = prompt('elija alguna de las siguientes opciones: \n  saldo \n  retiro \n  deposito \n  salir').toLowerCase();
+
+     opcion = prompt('elija alguna de las siguientes opciones: \n  💰saldo \n  🤑retiro \n  💵deposito \n   💳transferencia \n  📤salir').toLowerCase();
     switch(opcion){
-        case 'saldo':
+         case 'saldo':
             alert('Su saldo es de $' + saldo)
-            break;
+             break;
         case 'retiro':
             let montoRetiro = parseInt(prompt('Ingrese el monto a retirar:'))
             if(montoRetiro <= saldo){
@@ -44,7 +44,22 @@ if(pin===PIN){
             break;
         case 'salir':
             alert('gracias por usar los servicios de cajeroTT')
-            break;    
+            break; 
+        case 'transferencia':
+            let destinatario = prompt('Ingrese el nombre del destinatario')
+            let montoATransferir = parseInt(prompt('Ingrese el monto a transferir'))
+             if(isNaN(montoATransferir) || montoATransferir <= 0){
+                alert('monto invalido')
+             } else if(montoATransferir > saldo){
+                alert('Fondos insuficientes')
+             } else {
+                saldo-= montoATransferir;
+                alert('Transferencia exitosa, por el monto de $' + montoATransferir + ' a ' + '\n' + 'cuenta destino: ' + destinatario + '\n' + 'El nuevo saldo es de $' + saldo)
+                break;
+             }
+        default:
+            alert('Opción no válida, por favor intente nuevamente.')
+            break;
     }
 }
 } else {
