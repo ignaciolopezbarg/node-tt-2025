@@ -7,9 +7,8 @@
 //   a Saldo 
 //   b Retiro 
 //   c Deposito 
+//   d Transferencia
 //   d Salir 
-// 
-// 
 
 const PIN = '1234';
 let saldo = 1500;
@@ -26,7 +25,7 @@ while (numeroIntentos < 2 && pin !== PIN) {
 
 if (pin === PIN) {
     let opcion = '';
-    while (true) {
+    while (true) { //esto me genera un bucle infinito hasta que use la op 5 o use una opcion no valida
         opcion = prompt(
             'Elija alguna de las siguientes opciones: \n' +
             '1. 💵 Saldo \n' +
