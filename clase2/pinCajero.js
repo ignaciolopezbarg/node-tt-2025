@@ -35,7 +35,7 @@ if (pin === PIN) {
             '5. 📤 Salir'
         )?.toLowerCase().trim();
 
-        if (!opcion) continue; 
+        if (!opcion) continue; // con esto evito errores y si se ingresa cualquier cosa, vuelve al inicio del switch, si le doy  break, sale del while
 
         if (opcion === 'salir' || opcion === '5') {
             alert('Gracias por usar los servicios de Cajero TT');
@@ -65,6 +65,10 @@ if (pin === PIN) {
 
             case '4': // transferencia
                 let destinatario = prompt('Ingrese el nombre del destinatario');
+                  if (!destinatario) {
+                    alert(' Debe ingresar un destinatario');
+                    break;
+                }
                 let montoATransferir = parseInt(prompt('Ingrese el monto a transferir'));
                 if (isNaN(montoATransferir) || montoATransferir <= 0) {
                     alert('Monto inválido');
