@@ -6,3 +6,4 @@ console.log(`El precio final de los productos con el IVA incluido es : ${precios
 
 const valoresIVA = precios.map(precio => (precio * IVA).toFixed(2));
 console.log(`El valor del IVA de cada producto es: ${valoresIVA}`)
+
