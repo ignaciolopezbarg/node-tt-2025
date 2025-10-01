@@ -73,7 +73,7 @@ const manejoComandos = (opcion, data = null, id = null) =>
           console.log("El comando ingresado no es valido");
         }
         return;
-    }
+    } // faltaria en todos los casos hacer las validaciones si existen o no
   };
 manejoComandos('POST', 'Juan')
 manejoComandos('GET', null)
