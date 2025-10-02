@@ -1,30 +1,19 @@
-function nombreFuncion() {
-//   console.log("estoy en la clase 3");
-// }
-// // funciones expresadas
-// const funcionExpresada = () => {
-//   console.log("estoy en la clase 3");
-// };
-// //funciones flecha
-// const funcionFlecha = () => {
-//   console.log("estoy en la clase 3");
-// };
-
-// //DENTRO DE LOS PARENTESIS VAN LOS PARAMETROS Y LA RETORNAR USAMOS AL INVOCAR LOS ARGUMENTOS
-// let name = "";
-// function saludar(name) {
-//   console.log(`Hola ${name}, bienvenido!`);
-// }
-// saludar("pepe");
-
-// const sumar = (a, b, c) => {
-//   let resultado = a + b + c;
-//   console.log(resultado);
-// };
-// sumar(1, 2, 3);
-// sumar(4, 5, 6);
-
-// const restar = (n1, n2) => {
-//   return n1 - n2;
-// };
-// console.log(restar(20, 15));
+const autos = [
+  { marca: "Toyota", modelo: "Corolla", año: 2020, color: "Rojo" },
+  { marca: "Ford", modelo: "Focus", año: 2019, color: "Azul" },
+  { marca: "Chevrolet", modelo: "Onix", año: 2021, color: "Negro" },
+  { marca: "Honda", modelo: "Civic", año: 2018, color: "Blanco" },
+  { marca: "Hyundai", modelo: "Elantra", año: 2020, color: "Gris" },
+  { marca: "Nissan", modelo: "Sentra", año: 2017, color: "Rojo" },
+  { marca: "Kia", modelo: "Forte", año: 2021, color: "Azul" },
+  { marca: "Volkswagen", modelo: "Jetta", año: 2019, color: "Negro" },
+  { marca: "Subaru", modelo: "Impreza", año: 2020, color: "Blanco" },
+  { marca: "Mazda", modelo: "3", año: 2018, color: "Gris" },
+];
+autos.forEach((auto) => {
+  if (auto.año > 2018) {
+    console.log(
+      `Marca: ${auto.marca}, Modelo: ${auto.modelo}, Año: ${auto.año}, Color: ${auto.color}`
+    );
+  }
+});
